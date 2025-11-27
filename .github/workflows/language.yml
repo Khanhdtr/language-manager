@@ -31,4 +31,4 @@ jobs:
           git commit -m "Auto generate language files" || echo "No changes"
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
