@@ -1,6 +1,0 @@
-{
-  "@@locale": "en",
-  "hello": "Hello",
-  "welcome_user": "Welcome, {arg1}",
-  "call_end": "Call ended"
-}
