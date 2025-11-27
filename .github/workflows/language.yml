@@ -1,5 +1,4 @@
 name: Generate Language Files
-run: echo "${{ secrets.GH_TOKEN }}"
 
 on:
   push:
@@ -26,6 +25,7 @@ jobs:
 
       - name: Commit generated files
         run: |
+          echo "${{ secrets.GH_TOKEN }}"
           git config --global user.name "Khanhdtr"
           git config --global user.email "khanhdtr93@github.com"
           git add converter/flutter_output converter/qml_output
