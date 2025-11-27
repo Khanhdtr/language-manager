@@ -31,4 +31,4 @@ jobs:
           git commit -m "Auto generate language files" || echo "No changes"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
