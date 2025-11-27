@@ -25,8 +25,8 @@ jobs:
 
       - name: Commit generated files
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "Khanhdtr"
+          git config --global user.email khanhdtr93@github.com"
           git add converter/flutter_output converter/qml_output
           git commit -m "Auto generate language files" || echo "No changes"
           git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
