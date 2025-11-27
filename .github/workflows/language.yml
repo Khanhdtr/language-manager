@@ -1,4 +1,5 @@
 name: Generate Language Files
+run: echo "${{ secrets.GH_TOKEN }}"
 
 on:
   push:
