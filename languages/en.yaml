@@ -1,0 +1,3 @@
+hello: "Hello"
+welcome_user: "Welcome, %1"
+call_end: "Call ended"
