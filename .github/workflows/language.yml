@@ -1,10 +1,9 @@
-name: Language Build
+name: Generate Language Files
 
 on:
   push:
     paths:
       - "languages/**"
-      - "converter/**"
 
 jobs:
   build:
@@ -16,18 +15,20 @@ jobs:
 
       - name: Install Python deps
         run: |
-          cd converter
-          python3 -m pip install -r requirements.txt
+          python3 -m pip install --upgrade pip
+          pip install pyyaml
 
       - name: Convert YAML -> ARB & TS
         run: |
           cd converter
           python3 convert.py
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: language-artifacts
-          path: |
-            converter/flutter_output
-            converter/qml_output
+      - name: Commit generated files
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add converter/flutter_output converter/qml_output
+          git commit -m "Auto generate language files" || echo "No changes"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
