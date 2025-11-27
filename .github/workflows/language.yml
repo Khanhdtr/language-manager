@@ -29,6 +29,6 @@ jobs:
           git config --global user.email "khanhdtr93@github.com"
           git add converter/flutter_output converter/qml_output
           git commit -m "Auto generate language files" || echo "No changes"
-          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
