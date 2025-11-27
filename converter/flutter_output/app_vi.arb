@@ -1,0 +1,7 @@
+{
+  "@@locale": "vi",
+  "hello": "Xin chào",
+  "welcome_user": "Chào mừng, {arg1}",
+  "call_end": "Cuộc gọi đã kết thúc",
+  "call_start": "Cuộc gọi bắt đầu"
+}
