@@ -61,5 +61,9 @@
       <source>call_start11</source>
       <translation>Call start123123123</translation>
     </message>
+    <message>
+      <source>call_start12</source>
+      <translation>Call start123123123</translation>
+    </message>
   </context>
 </TS>
